@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universidad Continental - Crea tu propia historia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'uc-purple': '#481478',     
+              'uc-purple-dark': '#320b57',
+              'uc-magenta': '#E3007B',    
+              'uc-cyan': '#00A3E0',       
+              'uc-gray': '#F2F2F2',
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+</head>
+<body class="text-gray-800 antialiased">
+
+    <nav class="bg-white sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+
+            <a href="index.html" class="flex">
+                <img src="https://www.elanet-se.org/wp-content/uploads/2020/11/logo-U-Continental.png" 
+                     alt="" class="h-10 md:h-12 w-auto">
+            </a>
+
+            <div class="hidden lg:flex gap-8 text-sm font-bold text-gray-700 items-center">
+                <div class="group relative cursor-pointer py-2">
+                    <span class="hover:text-uc-magenta transition-colors">Carreras de Pregrado</span>
+                    <div class="absolute top-full left-0 w-48 bg-white shadow-xl rounded-lg p-2 hidden group-hover:block border-t-4 border-uc-purple">
+                        <a href="carreras.html" class="block px-4 py-2 hover:bg-gray-50 text-gray-600">Todas las carreras</a>
+                        <a href="facultades.html" class="block px-4 py-2 hover:bg-gray-50 text-gray-600">Por facultades</a>
+                    </div>
+                </div>
+                <a href="postgrado.html" class="hover:text-uc-magenta transition-colors">Posgrado</a>
+                <a href="admision.html" class="hover:text-uc-magenta transition-colors">Admisión</a> 
+                <a href="nosotros.html" class="hover:text-uc-magenta transition-colors">Nosotros</a>
+                <a href="contacto.html" class="hover:text-uc-magenta transition-colors">Contacto</a>
+                <a href="campus.html" class="hover:text-uc-magenta transition-colors">Campus y Sedes</a>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <a href="contacto.html" class="hidden md:inline-block px-6 py-2.5 bg-uc-magenta hover:bg-pink-700 text-white font-bold rounded-full transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                    Solicita información
+                </a>
+                
+                <button id="mobile-menu-button" class="lg:hidden text-uc-purple focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="relative bg-uc-purple overflow-hidden">
+        <div class="flex flex-col md:flex-row min-h-[600px]">
+            
+            <div class="w-full md:w-1/2 flex items-center justify-center p-10 md:p-20 relative z-10 bg-uc-purple">
+                <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none" style="background-image: radial-gradient(circle, #ffffff 1px, transparent 1px); background-size: 20px 20px;"></div>
+                
+                <div class="text-white max-w-lg">
+                    <span class="inline-block bg-uc-magenta text-xs font-bold px-3 py-1 rounded mb-4 tracking-wider uppercase">Admisión 2025</span>
+                    <h1 class="text-5xl md:text-6xl font-extrabold leading-tight mb-6">
+                        Crea tu propia <br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-white">historia de éxito</span>
+                    </h1>
+                    <p class="text-lg text-gray-200 mb-8 leading-relaxed">
+                        Elige una universidad licenciada con estándares internacionales. Conecta tu talento con el mundo a través de nuestra metodología experiencial.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="contacto.html" class="px-8 py-4 bg-white text-uc-purple font-bold rounded-lg shadow-lg hover:bg-gray-100 transition text-center">
+                            Postula ahora
+                        </a>
+                        <a href="https://www.youtube.com/watch?v=ln1CaPWnsaM" class="px-8 py-4 border border-white text-white font-bold rounded-lg hover:bg-white/10 transition text-center flex items-center justify-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                            Ver video
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full md:w-1/2 relative h-96 md:h-auto">
+                <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" 
+                     alt="Estudiantes UC" 
+                     class="absolute inset-0 w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-r from-uc-purple to-transparent md:bg-gradient-to-l opacity-20"></div>
+                
+                <div class="absolute bottom-8 left-8 bg-white/90 backdrop-blur-md p-4 rounded-xl shadow-2xl border-l-4 border-uc-magenta hidden md:block">
+                    <p class="font-bold text-uc-purple text-2xl">Licenciada</p>
+                    <p class="text-sm text-gray-600">por SUNEDU</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white">
+    <div class="container mx-auto px-6 max-w-5xl">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-uc-purple mb-4">
+                Únete a la Familia Continental
+            </h2>
+            <p class="text-lg text-gray-600">
+                Mira nuestro video de bienvenida y conoce más sobre nuestra visión y compromiso.
+            </p>
+        </div>
+
+        <div class="relative overflow-hidden rounded-xl shadow-2xl aspect-video bg-gray-200">
+            <video controls autoplay muted loop playsinline class="w-full h-full object-cover">
+                <source src="media/videocampus.mp4" type="video/mp4">
+                Tu navegador no soporta la etiqueta de video.
+            </video>
+        </div>
+
+        <div class="text-center mt-12">
+            <a href="contacto.html" class="inline-block px-8 py-3 bg-uc-cyan hover:bg-cyan-600 text-white font-bold rounded-full transition-colors shadow-lg">
+                ¡Quiero Postular!
+            </a>
+        </div>
+    </div>
+    </section>
+
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-uc-purple mb-4">Aprendizaje que se adapta a ti</h2>
+                <p class="text-gray-600">Elige cómo, cuándo y dónde estudiar con nuestro ecosistema digital de vanguardia.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow border-t-4 border-uc-purple group">
+                    <div class="w-14 h-14 bg-purple-100 rounded-full flex items-center justify-center mb-6 group-hover:bg-uc-purple transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-uc-purple group-hover:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Presencial</h3>
+                    <p class="text-gray-600 text-sm mb-6">Vive la experiencia universitaria al máximo en nuestros campus modernos con laboratorios de última generación.</p>
+                    <a href="carreras.html" class="text-uc-magenta font-bold text-sm hover:underline">Ver carreras ›</a>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow border-t-4 border-uc-cyan group">
+                    <div class="w-14 h-14 bg-cyan-100 rounded-full flex items-center justify-center mb-6 group-hover:bg-uc-cyan transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-uc-cyan group-hover:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Semipresencial</h3>
+                    <p class="text-gray-600 text-sm mb-6">Lo mejor de dos mundos. Clases virtuales flexibles combinadas con sesiones prácticas de fin de semana.</p>
+                    <a href="carreras.html" class="text-uc-cyan font-bold text-sm hover:underline">Ver carreras ›</a>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow border-t-4 border-uc-magenta group">
+                    <div class="w-14 h-14 bg-pink-100 rounded-full flex items-center justify-center mb-6 group-hover:bg-uc-magenta transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-uc-magenta group-hover:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">A Distancia</h3>
+                    <p class="text-gray-600 text-sm mb-6">Estudia 100% online desde cualquier lugar con nuestra plataforma premiada internacionalmente.</p>
+                    <a href="carreras.html" class="text-uc-magenta font-bold text-sm hover:underline">Ver carreras ›</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex justify-between items-end mb-12">
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-900">Explora nuestros programas</h2>
+                    <p class="text-gray-500 mt-2">Formación de calidad diseñada para el mercado laboral actual.</p>
+                </div>
+                <a href="contacto.html" class="hidden md:inline-flex items-center gap-2 text-uc-purple font-bold hover:text-uc-magenta transition">
+                    Ver toda la oferta académica 
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
+                </a>
+            </div>
+
+            <div class="container mx-auto flex flex-wrap gap-6 justify-center">
+                <div class="group relative rounded-xl overflow-hidden cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Ingeniería" class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to from-black/80 via-black/30 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-6">
+                        <span class="text-xs font-bold text-uc-cyan uppercase tracking-wider mb-1 block">Facultad de</span>
+                        <h3 class="text-white text-xl font-bold">Ingeniería</h3>
+                    </div>
+                </div>
+
+                <div class="group relative rounded-xl overflow-hidden cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Ciencias de la Salud" class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to from-black/80 via-black/30 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-6">
+                        <span class="text-xs font-bold text-uc-cyan uppercase tracking-wider mb-1 block">Facultad de</span>
+                        <h3 class="text-white text-xl font-bold">Ciencias de la Salud</h3>
+                    </div>
+                </div>
+
+                <div class="group relative rounded-xl overflow-hidden cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Ciencias de la Empresa" class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to from-black/80 via-black/30 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-6">
+                        <span class="text-xs font-bold text-uc-cyan uppercase tracking-wider mb-1 block">Facultad de</span>
+                        <h3 class="text-white text-xl font-bold">Ciencias de la Empresa</h3>
+                    </div>
+                </div>
+
+                <div class="group relative rounded-xl overflow-hidden cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Ciencias de la Salud" class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to from-black/80 via-black/30 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-6">
+                        <span class="text-xs font-bold text-uc-cyan uppercase tracking-wider mb-1 block">Facultad de</span>
+                        <h3 class="text-white text-xl font-bold">Derecho</h3>
+                    </div>
+                </div>
+
+                <div class="group relative rounded-xl overflow-hidden cursor-pointer">
+                    <img src="https://grupogeard.com/co/wp-content/uploads/sites/3/2022/04/pexels-artem-beliaikin-893126.jpg" alt="Ciencias de la Empresa" class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to from-black/80 via-black/30 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-6">
+                        <span class="text-xs font-bold text-uc-cyan uppercase tracking-wider mb-1 block">Facultad de</span>
+                        <h3 class="text-white text-xl font-bold">Ciencias Sociales</h3>
+                    </div>
+                </div>
+
+                <div class="group relative rounded-xl overflow-hidden cursor-pointer">
+                    <img src="https://estaticos-cdn.prensaiberica.es/clip/445ba508-379d-4e89-91cb-a376ebb0c2db_alta-libre-aspect-ratio_640w_0.jpg" alt="Ciencias de la Empresa" class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to from-black/80 via-black/30 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-6">
+                        <span class="text-xs font-bold text-uc-cyan uppercase tracking-wider mb-1 block">Facultad de</span>
+                        <h3 class="text-white text-xl font-bold">Psicologia</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="bg-[#1a1a1a] text-gray-400 py-16 text-sm">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <img src="https://www.elanet-se.org/wp-content/uploads/2020/11/logo-U-Continental.png" alt="UC Logo Blanco" class="h-10 mb-6 opacity-90">
+                    <p class="mb-6 leading-relaxed">Transformamos vidas a través de una educación de calidad, conectando personas con oportunidades globales.</p>
+                    <div class="flex gap-4">
+                        <a href="https://www.facebook.com/ucontinental/?locale=es_LA" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-uc-magenta hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/ucontinental/" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-uc-magenta hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                        <a href="https://pe.linkedin.com/school/universidad-continental/" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-uc-magenta hover:text-white transition"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.youtube.com/@UniversidadContinentalUC" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-uc-magenta hover:text-white transition"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-4 uppercase tracking-wider">La Universidad</h4>
+                    <ul class="space-y-3">
+                        <li><a href="nosotros.html" class="hover:text-white transition">Nosotros</a></li>
+                        <li><a href="#" class="hover:text-white transition">Autoridades</a></li>
+                        <li><a href="#" class="hover:text-white transition">Acreditaciones</a></li>
+                        <li><a href="#" class="hover:text-white transition">Noticias</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-4 uppercase tracking-wider">Estudiantes</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="hover:text-white transition">Portal del Estudiante</a></li>
+                        <li><a href="#" class="hover:text-white transition">Biblioteca Virtual</a></li>
+                        <li><a href="#" class="hover:text-white transition">Reglamentos</a></li>
+                        <li><a href="#" class="hover:text-white transition">Pagos en línea</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-4 uppercase tracking-wider">Contacto</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 mt-0.5 text-uc-magenta" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                            Av. San Carlos 1980, Huancayo y Sedes
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 mt-0.5 text-uc-magenta" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+                            (064) 481430
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs">
+                <p>&copy; 2025 Universidad Continental. Todos los derechos reservados.</p>
+                <div class="flex gap-4 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white">Libro de Reclamaciones</a>
+                    <a href="#" class="hover:text-white">Política de Privacidad</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://api.whatsapp.com/send?phone=51971115546&text=%20Hola%2C%20me%20gustar%C3%ADa%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20las%20carreras%20que%20ofrece%20la%20Universidad%20Continental." target="_blank" class="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-green-600 text-white p-4 rounded-full shadow-2xl transition-transform hover:scale-110 flex items-center gap-2 group">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" class="w-8 h-8" alt="WhatsApp">
+        <span class="max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-300 whitespace-nowrap font-bold">¡Chatea con nosotros!</span>
+    </a>
+
+    <div id="mobile-menu" class="fixed inset-0 z-[60] hidden" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+        <div id="mobile-menu-backdrop" class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity opacity-0"></div>
+
+        <div class="fixed inset-y-0 right-0 z-10 w-full max-w-xs overflow-y-auto bg-white shadow-xl transition-transform transform translate-x-full" id="mobile-menu-panel">
+            <div class="flex items-center justify-between px-6 py-4 border-b">
+                <img src="https://www.elanet-se.org/wp-content/uploads/2020/11/logo-U-Continental.png" alt="UC Logo" class="h-8">
+                <button id="close-menu-button" type="button" class="text-gray-400 hover:text-gray-500 focus:outline-none">
+                    <span class="sr-only">Cerrar menú</span>
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            
+            <div class="px-6 py-6 space-y-6">
+                <div class="space-y-4">
+                    <a href="carreras.html" class="block text-base font-medium text-gray-900 hover:text-uc-magenta">Todas las carreras</a>
+                    <a href="facultades.html" class="block text-base font-medium text-gray-900 hover:text-uc-magenta">Por facultades</a>
+                    <a href="postgrado.html" class="block text-base font-medium text-gray-900 hover:text-uc-magenta">Posgrado</a>
+                    <a href="admision.html" class="block text-base font-medium text-gray-900 hover:text-uc-magenta">Admisión</a>
+                    <a href="nosotros.html" class="block text-base font-medium text-gray-900 hover:text-uc-magenta">Nosotros</a>
+                    <a href="contacto.html" class="block text-base font-medium text-gray-900 hover:text-uc-magenta">Contacto</a>
+                    <a href="campus.html" class="block text-base font-medium text-gray-900 hover:text-uc-magenta">Campus y Sedes</a>
+                </div>
+                
+                <div class="pt-6 border-t border-gray-200">
+                    <a href="contacto.html" class="flex w-full items-center justify-center rounded-md border border-transparent bg-uc-magenta px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-pink-700">
+                        Solicita información
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const btn = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+        const panel = document.getElementById('mobile-menu-panel');
+        const backdrop = document.getElementById('mobile-menu-backdrop');
+        const closeBtn = document.getElementById('close-menu-button');
+
+        function openMenu() {
+            menu.classList.remove('hidden');
+            // Pequeño retraso para permitir que la transición CSS funcione
+            setTimeout(() => {
+                backdrop.classList.remove('opacity-0');
+                panel.classList.remove('translate-x-full');
+            }, 10);
+        }
+
+        function closeMenu() {
+            backdrop.classList.add('opacity-0');
+            panel.classList.add('translate-x-full');
+            
+            // Esperar a que termine la transición (300ms habitual en Tailwind) para ocultar el div
+            setTimeout(() => {
+                menu.classList.add('hidden');
+            }, 300);
+        }
+
+        btn.addEventListener('click', openMenu);
+        closeBtn.addEventListener('click', closeMenu);
+        
+        // Cerrar al hacer click en la parte oscura (backdrop)
+        backdrop.addEventListener('click', closeMenu);
+    </script>
+    
+</body>
+</html>
